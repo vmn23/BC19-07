@@ -1,7 +1,8 @@
-const dotenv       = require('dotenv');
-const express      = require('express');
-const logger       = require('morgan');
-const bodyParser   = require('body-parser');
+const dotenv     = require('dotenv');
+const express    = require('express');
+const logger     = require('morgan');
+const bodyParser = require('body-parser');
+const routes     = require('./routes/apis.js');
 
 dotenv.config({ silent: true });
 const app          = express();
@@ -13,6 +14,8 @@ app.use(bodyParser.json());
 // disable headers related to the server for security purposes
 app.disable('x-powered-by');
 app.disable('Server');
+
+app.use('/', routes);
 
 // allow CORS on the entire site
 app.use((req, res, next) => {
