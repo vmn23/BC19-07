@@ -1,0 +1,20 @@
+{
+  "name": "tech-pirates-backend",
+  "version": "1.0.0",
+  "description": "The Node.js backend for Cornell Tech Team Tech Pirates",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joepin/tech-pirates-backend.git"
+  },
+  "author": "Joey Pinhas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joepin/tech-pirates-backend/issues"
+  },
+  "homepage": "https://github.com/joepin/tech-pirates-backend#readme"
+}
