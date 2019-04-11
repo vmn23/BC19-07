@@ -1,8 +1,8 @@
-const router  = require('express').Router();
-const multer  = require('multer');
-const model   = require('../models/api.js');
+const router = require('express').Router();
+const multer = require('multer');
+const model  = require('../models/api.js');
 
-const upload  = multer({ dest: 'uploads/' });
+const upload = multer({ dest: 'uploads/' });
 
 function sendAsJSON(req, res) {
   res.json(res.data);
