@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.disable('x-powered-by');
 app.disable('Server');
 
-app.use('/', routes);
+app.use('/api', routes);
 
 // allow CORS on the entire site
 app.use((req, res, next) => {

@@ -12,11 +12,13 @@ function healthCheck(req, res, next) {
   res.data = {
     status: 200,
   };
+  next();
 }
 
 router.route('/identify')
-  .post('/profile', upload.single('avatar'), model.processImage, sendAsJSON);
+  .post(upload.single('avatar'), model.processImage, sendAsJSON);
 
-router.route('/health', healthCheck, sendAsJSON);
+router.route('/health')
+  .get(healthCheck, sendAsJSON);
 
 module.exports = router;
