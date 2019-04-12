@@ -3,7 +3,7 @@ const path   = require('path');
 const multer = require('multer');
 const model  = require('../models/api.js');
 
-const upload = multer({ dest: path.join(__dirname, 'uploads/') });
+const upload = multer({ dest: path.join(__dirname, '../uploads/') });
 
 function sendAsJSON(req, res) {
   res.json(res.data);
