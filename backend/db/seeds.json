@@ -1,4 +1,4 @@
-{
+[{
   "drug_name": "Advil",
   "images": [
     "https://via.placeholder.com/150",
@@ -11,7 +11,7 @@
     "4_star_count": 10,
     "3_star_count": 5,
     "2_star_count": 2,
-    "1_star_count": 1,
+    "1_star_count": 1
   },
   "reviews": [
     {
@@ -26,4 +26,4 @@
     "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
     "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
   ]
-}
+}]
