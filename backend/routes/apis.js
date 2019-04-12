@@ -22,4 +22,7 @@ router.route('/identify')
 router.route('/health')
   .get(appHealth, sendAsJSON);
 
+router.route('/drugs')
+  .get(model.getDrugByNDCCode, sendAsJSON);
+
 module.exports = router;
