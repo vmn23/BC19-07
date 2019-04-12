@@ -20,7 +20,7 @@ function getDrugByName(req, res, next) {
   }
 
   getDB().then((client) => {
-    const db = client.db('DB_NAME');
+    const db = client.db(DB_NAME);
     db.collection('drugs')
       .findOne({
         drug_name: name,
