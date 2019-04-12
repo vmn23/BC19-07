@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import './star.dart';
 import './druginfo.dart';
+import './druglist.dart' as globals;
 
 class ListPage extends StatefulWidget {
   @override
@@ -13,29 +14,6 @@ class _ListState extends State<ListPage> {
   final symptomFilter = TextEditingController();
   int rating = 0;
   int price = 0;
-
-
-  List<DrugSimple> allDrugs = [
-    DrugSimple(
-        drugName: 'Advil',
-        imageUrl: 'asdfsadf',
-        rating: 4.3,
-        tags: ["bleh", "more bleh"]),
-    DrugSimple(
-        drugName: 'Advil1', imageUrl: 'asdfsadf', rating: 4.1, tags: ["hello"]),
-    DrugSimple(
-        drugName: 'Advil2', imageUrl: 'asdfsadf', rating: 3.3, tags: ["headache"]),
-    DrugSimple(
-        drugName: 'Advil3',
-        imageUrl: 'asdfsadf',
-        rating: 1.3,
-        tags: ["alkdjf"]),
-    DrugSimple(
-        drugName: 'Advil4',
-        imageUrl: 'asdfsadf',
-        rating: 2.3,
-        tags: ["stomach"]),
-  ];
 
   List<DrugSimple> filteredDrugs;
 
@@ -52,7 +30,7 @@ class _ListState extends State<ListPage> {
   }
 
   void updateList() {
-    filteredDrugs = allDrugs.where((i) => i.rating > rating).toList();
+    filteredDrugs = globals.allDrugs.where((i) => i.rating > rating).toList();
     if (filteredDrugs != null) {
       if (symptomFilter.text != "") {
         filteredDrugs = filteredDrugs
@@ -127,6 +105,9 @@ class _ListState extends State<ListPage> {
               // Text(price.toString()),
               filteredDrugs.length == 0 ? Text('No drugs match that criteria, please try again'): 
               Column(children: filteredDrugs),
+              // ListView.builder(
+              //   itemBuilder: (context, i) { return filteredDrugs[i];},
+              // )
             ],
           ),
         ),

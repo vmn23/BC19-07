@@ -5,40 +5,46 @@ class DrugSimple extends StatelessWidget {
   final String imageUrl;
   final List<String> tags;
   final double rating;
-  // final List reviews;
-  // final List desc;
+  final List reviews;
+  final List desc;
 
-  DrugSimple({this.drugName, this.imageUrl, this.rating, this.tags});
+  DrugSimple({this.drugName, this.imageUrl, this.rating, this.tags, this.reviews = const [], this.desc = const []});
 
   factory DrugSimple.fromJson(Map<String, dynamic> json) {
     return DrugSimple(
         drugName: json["drug_name"],
         imageUrl: json["images"],
         rating: double.parse(json["rating"]["average"]),
-        tags: []
-        );
+        tags: []);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       child: SizedBox(
-        child: Card(
-          margin: EdgeInsets.all(10),
-          child: Row(
-            children: <Widget>[
-              Image.asset('assets/PfindRX_No_Text.png'),
-              Column(
-                children: <Widget>[
-                  Text(drugName), 
-                  Text(rating.toString()),
-                  Text(tags.join(", "))
+        child: GestureDetector(
+          onTap: () { Navigator.pushNamed(
+            context, 
+            '/detail',
+            arguments: this);}
+            ,
+          child: Card(
+            margin: EdgeInsets.all(10),
+            child: Row(
+              children: <Widget>[
+                Image.asset('assets/PfindRX_No_Text.png'),
+                Column(
+                  children: <Widget>[
+                    Text(drugName),
+                    Text(rating.toString()),
+                    Text(tags.join(", "))
                   ],
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
-      height: 100,  
+        height: 100,
       ),
     );
   }
