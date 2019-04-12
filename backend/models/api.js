@@ -8,10 +8,10 @@ function processImage(req, res, next) {
   next();
 }
 
-function getDrugByNDCCode(req, res, next) {
-  const { code } = req.query || req.params || req.body;
-  if (code === null || code === undefined || !code) {
-    const err = new Error('Missing drug code');
+function getDrugByName(req, res, next) {
+  const { name } = req.query || req.params || req.body;
+  if (name === null || name === undefined || !name) {
+    const err = new Error('Missing drug name');
     err.status = 422;
     next(err);
   }
@@ -20,7 +20,7 @@ function getDrugByNDCCode(req, res, next) {
     const db = client.db('tech_pirates');
     db.collection('drugs')
       .findOne({
-        ndc_code: parseInt(code, 10),
+        drug_name: name,
       }, {
         _id: 0,
       })
@@ -39,5 +39,5 @@ function getDrugByNDCCode(req, res, next) {
 
 module.exports = {
   processImage,
-  getDrugByNDCCode,
+  getDrugByName,
 };
