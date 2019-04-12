@@ -4,7 +4,7 @@ class DrugSimple extends StatelessWidget {
   final String drugName;
   final String imageUrl;
   final List<String> tags;
-  double rating;
+  final double rating;
   // final List reviews;
   // final List desc;
 
