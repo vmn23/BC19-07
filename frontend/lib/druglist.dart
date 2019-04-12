@@ -5,25 +5,21 @@
   int selectedDrug = -1;
 
   List<DrugSimple> allDrugs = [
-    DrugSimple(
-      index: 0,
-  drugName: 'Advil',
-  imageUrl: 'assets/advil.jpg',
-  rating: 4.95,
-  tags: ["fever", "pain", "headache", "stress", "cold", "cough"],
+  DrugSimple(
+    index: 0,
+  drugName: 'Aleve PM',
+  imageUrl: 'assets/aleve.jpeg',
+  rating: 1.78,
+  tags: ["UTI", "infection", "urinary tract infection"],
   reviews: [
-          "Advil works great as a sleep aid for a chronic pain sufferer. If you are not in pain, don't use ibuprofen pm, but instead try just Benadryl.his stuff works great for falling asleep, but the drawback is being very tired when I wake up. Not everyone has this issue, but I do. Getting out of bed is extra hard, since after 8 hours ibuprofen stops working, so your pain comes back, and you might still be sleep. Use with caution and don't replace ibuprofen with this!",
-          "This stuff is a life saver for me when for a month a year I switch over to night shift. I just take 2 along with Zhou Drift Off, and I get much better rest, not perfect but I am not waking up 3 hours later wondering where I am. Worth it!",
-          "I had two pills, but I could not fall asleep at all!"
+          "Great after long day of working outside and getting worn out. Night night!",
+          "This product was easy to open and swallow pills. It was effective in promoting better sleep at night and more comfortably. I would recommend it to anyone that needs a sleep aid or has pain at night.",
+          "I use Aleve pm at bedtime to help me get a good night’s rest. I works every time. I'm highly satisfied with this product. I don't use any other brand."
     ],
   desc: [
-    "Whether you have a headache, muscle aches, backaches, menstrual pain, minor arthritis and other joint pain, or aches and pains from the common cold, nothing's stronger or longer lasting. The medicine in Advil is #1 doctor recommended for pain relief.",
-    "Advil coated ibuprofen tablets temporarily relieve minor aches and pains due to: headache, toothache, backache, menstrual cramps, the common cold, muscular aches, and minor pain of arthritis. Advil coated ibuprofen tablets temporarily reduce fever as well.",
-    "Millions have trusted Advil to safely and effectively relieve their aches and pains for over 30 years. Stops pain at the site of inflammation for relief where you need it. The medicine in Advil is what ER doctors use to treat their own aches and pains.",
-    "When used as directed, Advil ibuprofen is a safe and effective pain reliever. In fact, when ER Doctors choose an over-the-counter pain reliever for their own aches and pains, the medicine in Advil is their #1 choice.(3)"
+    "When your pain is keeping you from sleeping, Aleve PM can give you the rest and relief you need. It features an easy open cap designed to make getting the medicine you need as simple as possible. The special night time formula will cut down on your pain and help you get the sleep you need. Comes in an 80-count package."
   ]
 ),
-
 DrugSimple(
   index: 1,
   drugName: 'Bayer Aspirin',
@@ -33,7 +29,7 @@ DrugSimple(
   reviews: [
         "Good count for my aspirin needs, take it for heart problems...",
         "Take one daily at age 74, have since age 50",
-        "what can I say, they're asprin"
+        "What can I say, they're asprin"
     ],
   desc: [
       "Genuine Bayer Aspirin can provide pain relief from headaches, backaches, muscle pain, toothaches, menstrual pain and minor arthritis pain —and has for over 120 years.",
@@ -42,57 +38,54 @@ DrugSimple(
       "Taking Genuine Bayer Aspirin for pain relief does not interfere with the benefits of taking it on a doctor-directed aspirin regimen. Each 325 mg coated aspirin tablet: provides safe, proven pain relief when taken as directed; is caffeine-free and sodium-free; is coated to make it easier to swallow."
     ]
 ),
-
 DrugSimple(
   index: 2,
-  drugName: 'Chloraseptic',
-  imageUrl: 'assets/chloraseptic.png',
-  rating: 3.70,
-  tags: ["pain", "fever", "cough"],
+  drugName: 'Cystex Cranberry',
+  imageUrl: 'assets/cystex.jpg',
+  rating: 2.95,
+  tags: ["UTI", "infection", "urinary tract infection"],
   reviews: [
-        "I was having an ulcer in my mouth, those that lasts for a week or two and my doctor gave me a prescription of Apo-Benzydamine Oral Rinse 15% and I can tell you the medicine was worse than the ulcer itself. After few months I got another ulcer and again I needed this medication. I went to the pharmacy and I was told I needed another prescription. Unfortunately it takes me at least 3 hours to go and see the doctor just to get the same prescription she gave me before. I asked if there was something similar and there I found Chloraseptic Sore Throat Spray, Cherry, 6-Ounce (177 ml) (Pack of 3) I did not need prescription for this one and the result was way better than with my previous medication. It numbs your mouth, mainly where you spray and the pain goes away for a while. Very good for ulcers in the mouth.",
-        "I searched for many days looking for the best value out there and couldn't find anything cheaper than at Amazon.com.. I bought the pack of 3. I absolutely love this product, it does calms your symptoms whenever you are getting the flu or when your throat hurts.",
-        "Not bad product for temporary relief of a sore throat but viruses are just that and a generic is just as good."
+          "Started working after taking a spoonful felt much better",
+          "I thought I was getting a urinary tract infection while I was on vacation. The sole local drugstore didn't have Cystex tablets (which are great), but they had this liquid. Oh, well, better this than nothing. OMG. Taking it at 2 TBS per day really made a positive difference. I've kept up the 1 TBS per day since then because it seems to make SO much of a difference.",
+          "This product really helps to protect my urinary tract against infection"
     ],
   desc: [
-      "Quickly relieve your sore throat pain and cough with a Wild Cherry, Multi Symptom Formula.",
-      "Provides fast-acting relief of sore throat and mouth pain",
-      "Muti-symptom formula with soothing liquid center - relieves pain, suppresses cough up to 4 hours and cools nasal passages"
-    ]
+    "Increasing your urinary health is important, especially if you suffer from recurring urinary tract infections. With Cystex Liquid Cranberry Complex, the vitamin C, D-Mannose and inulin it contains, helps to promote a healthy bladder. By taking just one tablespoon of Cystex daily, you will feel the many benefits as your risk of urinary tract infections decreases and the health of your bladder increases."
+  ]
 ),
-
 DrugSimple(
   index: 3,
-  drugName: 'Vicks 44 Cough Liquid',
-  imageUrl: 'assets/vicks.jpg',
-  rating: 2.00,
-  tags: ["pain", "cough", "cold"],
+  drugName: 'Wallgreens Aspirin 81',
+  imageUrl: 'assets/Aspirin81.jpg',
+  rating: 3.70,
+  tags: ["pain", "fever", "headache", 'inflammation'],
   reviews: [
-        "I didn't wake up through the night. The taste was okay and again, left a tingling sensation in my mouth. It started working quickly for me. My symptoms started coming back about 45 minutes before it was time to retake it. It worked great and did exactly as it said it would. The only thing I didn't like was the tingling sensation.",
-        "Very strong taste but extremely effective",
-        "elps the nasty cold and nighttime cough just which I did not get constipated after using it . Maybe just my issue but it does happen. The plus side is I get a restful night sleep and cold is better in awakening."
+        "We have always found Walgreen's generic versions of over-the-counter medicines and supplements to be every bit as effective as the costlier brands. "
+        "Very fast delivery, reasonably priced, also safety in ordering. Not finished with current bottle.",
     ],
   desc: [
-        "Cough – restless days and sleepless nights? Why take any cough syrup when you have trusted Formula 44 Cough Control from Vicks.",
-        "Formulated with clinically proven dose of Dextromethorphan Hydrobromide in a special base, Vicks Formula 44 coats your throat better to provide long-lasting* and effective relief from dry cough. Now make a recovery from your dry cough."
+      "Low dosage aspirin",
+      "Safety coated for aspirin regimen users",
+      "Easy to swallow",
+      "Relieves minor aches and pains"
     ]
 ),
 
 DrugSimple(
   index: 4,
-  drugName: 'Mucinex FastMax',
-  imageUrl: 'assets/mucinex.jpg',
-  rating: 1.59,
-  tags: ["cold", "cough"],
+  drugName: 'Wallgreens Aspirin 325',
+  imageUrl: 'assets/aspirin325.jpg',
+  rating: 2.00,
+  tags: ["pain", "cough", "cold", 'inflammation'],
   reviews: [
-        "Super safe, all it does is thin mucus which is what I needed, because I was keeping my husband up snorting and trying to get that thick residual post nasal drainage up or down. With mucinex twice a day it is MUCH less of a problem to me. ",
-        "Great cough syrup, loosens things up without a lot of coughing. Expensive, but worth every penny. I take this everyday by doctors order because of asthma. Drink plenty of water while taking this.",
-        "It cleared up my throat4 most of the way, but it made my chest hurt, made my eyes water so much they burned and made me feel out of breath... I think I will stick to Sudafed."
+        "Had been taking rx pain meds part of the time and the rest of the time tri-buffered aspirin. this seems to work as good on the pain as the other aspirin with less irritation on the stomach.",
+        "Very strong taste but extremely effective"
     ],
   desc: [
-        "Thins & Loosens Mucus",
-        "Controls Cough",
-        "Relieves Chest Congestion"
+      "Safety coated for aspirin regimen users",
+      "Easy to swallow",
+      "Relieves minor aches and pains"
     ]
 ),
+
   ];

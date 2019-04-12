@@ -47,11 +47,11 @@ flutter:
     - assets/PfindRX.png
     - assets/PfindRX_No_Graphic_White.png
     - assets/PfindRX_No_Graphic.png
-    - assets/advil.jpg
+    - assets/aleve.jpeg
     - assets/bayer.png
-    - assets/chloraseptic.png
-    - assets/mucinex.jpg
-    - assets/vicks.jpg
+    - assets/Aspirin81.jpg
+    - assets/aspirin325.jpg
+    - assets/cystex.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
