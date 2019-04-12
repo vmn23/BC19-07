@@ -1,23 +1,49 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-// import 'package:image_picker/image_picker.dart';
+import 'package:image_picker/image_picker.dart';
 
-class TakePicture extends StatelessWidget {
+class TakePicture extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _TakePictureState();
+}
+
+class _TakePictureState extends State<TakePicture> {
+  File _image;
+
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.camera);
+
+    setState(() {
+      _image = image;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Take a picture of the shelves in front of you'),
         backgroundColor: Colors.blueGrey[900],
-        title: Text("Take a Picture of the Shelves"),
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to the first screen by popping the current route
-            // off the stack
-            Navigator.pop(context);
-          },
-          child: Text('Go to camera!'),
-        ),
+        child: _image == null
+            ? Text('No image taken yet.')
+            : Column(children: <Widget>[
+                Image.file(_image, height: 555),
+                RaisedButton(
+                  child: Text('Analyze Image'),
+                  onPressed: () {
+                    // Navigate to the second screen using a named route
+                    Navigator.pushNamed(context, '/list');
+                  },
+                )
+              ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: getImage,
+        tooltip: 'Pick Image',
+        child: Icon(Icons.camera),
+        backgroundColor: Colors.blueGrey[900],
       ),
     );
   }
