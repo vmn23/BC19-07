@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 function getDB() {
-  return MongoClient.connect(process.env.DB_CONNECTION);
+  return MongoClient.connect(process.env.MONGODB_URI);
 }
 
 module.exports = {
