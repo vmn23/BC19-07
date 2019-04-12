@@ -1,16 +1,53 @@
+import 'dart:core';
 import 'package:flutter/material.dart';
 
 import './star.dart';
+import './druginfo.dart';
 
-class List extends StatefulWidget {
+class ListPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _ListState();
 }
 
-class _ListState extends State<List> {
+class _ListState extends State<ListPage> {
   final symptomFilter = TextEditingController();
-  int rating = 5;
+  int rating = 0;
   int price = 0;
+
+  List<DrugSimple> allDrugs = [
+    DrugSimple(
+      drugName: 'Advil',
+      imageUrl: 'asdfsadf',
+      rating: 4.3,
+    ),
+    DrugSimple(
+      drugName: 'Advil1',
+      imageUrl: 'asdfsadf',
+      rating: 4.1,
+    ),
+    DrugSimple(
+      drugName: 'Advil2',
+      imageUrl: 'asdfsadf',
+      rating: 3.3,
+    ),
+    DrugSimple(
+      drugName: 'Advil3',
+      imageUrl: 'asdfsadf',
+      rating: 1.3,
+    ),
+    DrugSimple(
+      drugName: 'Advil4',
+      imageUrl: 'asdfsadf',
+      rating: 2.3,
+    ),
+  ];
+
+  List<DrugSimple> filteredDrugs;
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   void dispose() {
     symptomFilter.dispose();
@@ -46,14 +83,29 @@ class _ListState extends State<List> {
                 ),
               ),
               Row(children: <Widget>[
-                Text('Rating ≥ ', style: new TextStyle(color: Colors.black87, fontFamily: "Poppins", fontSize: 16),),
+                Text(
+                  'Rating ≥ ',
+                  style: new TextStyle(
+                      color: Colors.black87,
+                      fontFamily: "Poppins",
+                      fontSize: 16),
+                ),
                 StarRating(
                   rating: rating,
-                  onRatingChanged: (rating) =>
-                      setState(() => this.rating = rating),
+                  onRatingChanged: (rating) => setState(() {
+                        this.rating = rating;
+                        filteredDrugs =
+                            allDrugs.where((i) => i.rating > rating).toList();
+                      }),
                 ),
                 Text('         '),
-                Text('Price ≤ ', style: new TextStyle(color: Colors.black87, fontFamily: "Poppins", fontSize: 16),),
+                Text(
+                  'Price ≤ ',
+                  style: new TextStyle(
+                      color: Colors.black87,
+                      fontFamily: "Poppins",
+                      fontSize: 16),
+                ),
                 StarRating(
                   rating: price,
                   star: false,
@@ -64,6 +116,10 @@ class _ListState extends State<List> {
               Text(symptomFilter.text),
               Text(rating.toString()),
               Text(price.toString()),
+              Text(filteredDrugs.length.toString()),
+              Column(
+                children: filteredDrugs
+              )
             ],
           ),
         ),

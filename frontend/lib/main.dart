@@ -11,7 +11,7 @@ void main() {
     routes: {
       '/': (context) => Landing(),
       '/pic': (context) => TakePicture(),
-      '/list': (context) => List(),
+      '/list': (context) => ListPage(),
       // '/detail' : (context) => Detail()
     },
   ));
