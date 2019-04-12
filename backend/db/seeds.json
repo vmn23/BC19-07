@@ -1,5 +1,6 @@
 [
 {
+    "index": 0,
     "drug_name": "Advil",
     "images": [
         "https://dcmzfk78s4reh.cloudfront.net/1531323084201.jpg",
@@ -44,6 +45,7 @@
     ]
 },
 {
+    "index": 1,
     "drug_name": "Bayer Aspirin",
     "images": [
         "https://www.bayeraspirin.com/static/media/images/wonderdrug/products/d_PDP_GBA_HERO_490x560_CAROUSEL1.png",
@@ -88,6 +90,7 @@
     ]
 },
 {
+    "index": 2,
     "drug_name": "Chloraseptic",
     "images": [
         "https://www.chloraseptic.com/sites/chloraseptic/files/product-images/chloraseptic-total_wild-cherry_fast-acting.png.354x308_q85.png"
@@ -131,6 +134,7 @@
 
 },
 {
+    "index": 3,
     "drug_name": "Vicks 44 Cough Liquid",
     "images": [
         "https://pics.drugstore.com/prodimg/600578/100.jpg",
@@ -173,6 +177,7 @@
     ]
 },
 {
+    "index": 4,
     "drug_name": "Mucinex FastMax - Severe Congestion and Cough",
     "images": [
         "https://cdn.shopify.com/s/files/1/0049/2725/8742/products/bcgi8pkuymgbrujrinj8_1024x1024.jpg?v=1529007334"
@@ -213,6 +218,7 @@
     ]
 },
 {
+    "index": 5,
     "drug_name": "SUDAFED PEÆ Pressure + Pain + Cough Liquid",
     "images": [
         "https://www.sudafed.com/sites/sudafed_us/files/styles/product_image/public/product-images/sudafed_pe_pressure_pain_liquid-6_1.jpg"
@@ -252,6 +258,7 @@
     ]
 },
 {
+    "index": 6,
     "drug_name": "Vicks Nyquil Severe Cold & Flu Nighttime",
     "images": [
         "https://images-na.ssl-images-amazon.com/images/I/81Jn9tp1gtL._SY679_.jpg"
@@ -291,6 +298,7 @@
     ]
 },
 {
+    "index": 7,
     "drug_name": "Aleve PM",
     "images": [
         "https://images-na.ssl-images-amazon.com/images/I/51xZ1DVMyzL.jpg"
