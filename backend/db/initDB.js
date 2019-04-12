@@ -3,18 +3,19 @@ const { getDB } = require('./getDB.js');
 const seeds     = require('./seeds.json');
 
 dotenv.config({ silent: true });
+const { DB_NAME } = process.env || 'tech_pirates';
 
 /* eslint-disable no-console */
 console.log(`Found ${seeds.length} objects in ./seeds.json`);
 
 getDB().then((client) => {
-  const db = client.db('tech_pirates');
-  console.log('Attempting to empty the collection tech_pirates.drugs...');
+  const db = client.db(DB_NAME);
+  console.log(`Attempting to empty the collection ${DB_NAME}.drugs...`);
   db.collection('drugs')
     .deleteMany({})
     .then(() => {
       console.log('Emptied successfully!\n');
-      console.log(`Attempting to insert ${seeds.length} objects to tech_pirates.drugs...`);
+      console.log(`Attempting to insert ${seeds.length} objects to ${DB_NAME}.drugs...`);
       db.collection('drugs')
         .insertMany(seeds)
         .then((resp) => {

@@ -1,5 +1,7 @@
 const { getDB } = require('../db/getDB.js');
 
+const { DB_NAME } = process.env || 'tech_pirates';
+
 function processImage(req, res, next) {
   res.data = {
     status: 200,
@@ -18,7 +20,7 @@ function getDrugByName(req, res, next) {
   }
 
   getDB().then((client) => {
-    const db = client.db('tech_pirates');
+    const db = client.db('DB_NAME');
     db.collection('drugs')
       .findOne({
         drug_name: name,
