@@ -100,14 +100,11 @@ class _ListState extends State<ListPage> {
                       }),
                 ),
               ]),
-              // Text(symptomFilter.text),
-              // Text(rating.toString()),
-              // Text(price.toString()),
-              filteredDrugs.length == 0 ? Text('No drugs match that criteria, please try again'): 
-              Column(children: filteredDrugs),
-              // ListView.builder(
-              //   itemBuilder: (context, i) { return filteredDrugs[i];},
-              // )
+              filteredDrugs.length == 0
+                  ? Text('No drugs match that criteria, please try again')
+                  : SingleChildScrollView(
+                      child: Column(children: filteredDrugs),
+                    ),
             ],
           ),
         ),
