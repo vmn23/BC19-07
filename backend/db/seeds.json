@@ -1,29 +1,331 @@
-[{
-  "drug_name": "Advil",
-  "images": [
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/250"
-  ],
-  "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
-  "rating": {
-    "average": 4.95,
-    "5_star_count": 100,
-    "4_star_count": 10,
-    "3_star_count": 5,
-    "2_star_count": 2,
-    "1_star_count": 1
-  },
-  "reviews": [
+[
+{
+    "drug_name": "Advil",
+    "images": [
+        "https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1531323084201.jpg",
+        "https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1531323083211.jpg"
+    ],
+    "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
+    "rating":
     {
-      "user_name": "John Doe",
-      "rating": 4.5,
-      "subject": "My Favorite",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
-    }
-  ],
-  "description": [
-    "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
-    "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
-    "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
-  ]
+        "average": 4.95,
+        "5_star_count": 100,
+        "4_star_count": 10,
+        "3_star_count": 5,
+        "2_star_count": 2,
+        "1_star_count": 1
+    },
+    "reviews": [
+        {
+            "user_name": "Aris McKalynn",
+            "rating": 4.5,
+            "subject": "Works great for chronic pain",
+            "review": "Advil works great as a sleep aid for a chronic pain sufferer. If you are not in pain, don't use ibuprofen pm, but instead try just Benadryl.his stuff works great for falling asleep, but the drawback is being very tired when I wake up. Not everyone has this issue, but I do. Getting out of bed is extra hard, since after 8 hours ibuprofen stops working, so your pain comes back, and you might still be sleep. Use with caution and don't replace ibuprofen with this!"
+        },
+        {
+            "user_name": "Justin Jagon",
+            "rating": 5,
+            "subject": "Life Saver for switching to night shift",
+            "review": "This stuff is a life saver for me when for a month a year I switch over to night shift. I just take 2 along with Zhou Drift Off, and I get much better rest, not perfect but I am not waking up 3 hours later wondering where I am. Worth it!"
+        },
+        {
+            "user_name": "Linda Auger",
+            "rating": 5,
+            "subject": "Not work",
+            "review": "I had two pills, but I could not fall asleep at all!"
+        }
+
+    ],
+    "description": [
+        "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
+        "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
+        "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+    ]
+},
+{
+    "drug_name": "Bayer Aspirin",
+    "images": [
+        "https://www.bayeraspirin.com/static/media/images/wonderdrug/products/d_PDP_GBA_HERO_490x560_CAROUSEL1.png",
+        "https://images-na.ssl-images-amazon.com/images/I/814xc6OzwXL._SY679_.jpg"
+    ],
+    "tags": ["pain", "fever", "headache"],
+    "rating":
+    {
+        "average": 4.76,
+        "5_star_count": 100,
+        "4_star_count": 10,
+        "3_star_count": 3,
+        "2_star_count": 2,
+        "1_star_count": 1
+    },
+    "reviews": [
+        {
+            "user_name": "Bruce Evans",
+            "rating": 4,
+            "subject": "Four Stars",
+            "review": "Good count for my aspirin needs, take it for heart problems..."
+        },
+        {
+            "user_name": "Ron Frank Sr",
+            "rating": 5,
+            "subject": "Great buy even better product",
+            "review": "Take one daily at age 74, have since age 50"
+        },
+        {
+            "user_name": "Austin Crool",
+            "rating": 3,
+            "subject": "Great",
+            "review": "what can I say, they're asprin"
+        }
+
+    ],
+    "description": [
+        "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
+        "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
+        "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+    ]
+},
+{
+    "drug_name": "Chloraseptic",
+    "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5uU4m8O5WI3J-65lIPTPxo6KHfFMqzHDdjCJW-XcCKss5XFI9",
+        "https://www.cvs.com/bizcontent/merchandising/productimages/large/67811210256_4.jpg"
+    ],
+    "tags": ["pain", "fever", "cough"],
+    "rating":
+    {
+        "average": 4.7,
+        "5_star_count": 100,
+        "4_star_count": 10,
+        "3_star_count": 3,
+        "2_star_count": 2,
+        "1_star_count": 1
+    },
+    "reviews": [
+        {
+            "user_name": "Fabricio Tank",
+            "rating": 4.2,
+            "subject": "Very good for ulcers in the mouth. Recommended",
+            "review": "I was having an ulcer in my mouth, those that lasts for a week or two and my doctor gave me a prescription of Apo-Benzydamine Oral Rinse 15% and I can tell you the medicine was worse than the ulcer itself. After few months I got another ulcer and again I needed this medication. I went to the pharmacy and I was told I needed another prescription. Unfortunately it takes me at least 3 hours to go and see the doctor just to get the same prescription she gave me before. I asked if there was something similar and there I found Chloraseptic Sore Throat Spray, Cherry, 6-Ounce (177 ml) (Pack of 3) I did not need prescription for this one and the result was way better than with my previous medication. It numbs your mouth, mainly where you spray and the pain goes away for a while. Very good for ulcers in the mouth."
+        },
+        {
+            "user_name": "Riley Fazekas",
+            "rating": 5,
+            "subject": "Life Saver for switching to night shift",
+            "review": "I searched for many days looking for the best value out there and couldn't find anything cheaper than at Amazon.com.. I bought the pack of 3. I absolutely love this product, it does calms your symptoms whenever you are getting the flu or when your throat hurts."
+        },
+        {
+            "user_name": "Diana Jhonson",
+            "rating": 3,
+            "subject": "Great except",
+            "review": "Not bad product for temporary relief of a sore throat but viruses are just that and a generic is just as good."
+        }
+
+    ],
+    "description": [
+        "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
+        "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
+        "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+    ]
+
+},
+{
+    "drug_name": "Vicks 44 Cough Liquid",
+    "images": [
+        "https://pics.drugstore.com/prodimg/600578/100.jpg",
+        "https://pics.drugstore.com/prodimg/600578/2_100.jpg"
+    ],
+    "tags": ["pain", "cough", "cold"],
+    "rating":
+    {
+        "average": 4.00,
+        "5_star_count": 100,
+        "4_star_count": 10,
+        "3_star_count": 3,
+        "2_star_count": 2,
+        "1_star_count": 1
+    },
+    "reviews": [
+        {
+            "user_name": "Kristina Harkins",
+            "rating": 4,
+            "subject": "Works wonders",
+            "review": "I didn't wake up through the night. The taste was okay and again, left a tingling sensation in my mouth. It started working quickly for me. My symptoms started coming back about 45 minutes before it was time to retake it. It worked great and did exactly as it said it would. The only thing I didn't like was the tingling sensation."
+        },
+        {
+            "user_name": "Jasmine Erns",
+            "rating": 4,
+            "subject": "Effective",
+            "review": "Very strong taste but extremely effective"
+        },
+        {
+            "user_name": "Austin Crool",
+            "rating": 3,
+            "subject": "Great cold relief",
+            "review": "elps the nasty cold and nighttime cough just which I did not get constipated after using it . Maybe just my issue but it does happen. The plus side is I get a restful night sleep and cold is better in awakening."
+        }
+
+    ],
+    "description": [
+        "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
+        "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
+        "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+    ]
+},
+{
+    "drug_name": "Mucinex FastMax - Severe Congestion and Cough",
+    "images": [
+        "https://cdn.shopify.com/s/files/1/0049/2725/8742/products/bcgi8pkuymgbrujrinj8_1024x1024.jpg?v=1529007334"
+    ],
+    "tags": ["cold", "cough"],
+    "rating":
+    {
+        "average": 4.59,
+        "5_star_count": 230,
+        "4_star_count": 100,
+        "3_star_count": 2,
+        "2_star_count": 6,
+        "1_star_count": 5
+    },
+    "reviews": [
+    {
+        "user_name": "Anne Hothoway",
+        "rating": 5,
+        "subject": "Great for mucus",
+        "review": "Super safe, all it does is thin mucus which is what I needed, because I was keeping my husband up snorting and trying to get that thick residual post nasal drainage up or down. With mucinex twice a day it is MUCH less of a problem to me. "
+    },
+    {
+        "user_name": "Katie Hilmes",
+        "rating": 5,
+        "subject": "Worth every penny",
+        "review": "Great cough syrup, loosens things up without a lot of coughing. Expensive, but worth every penny. I take this everyday by doctors order because of asthma. Drink plenty of water while taking this."
+    },
+    {
+        "user_name": "Brad Litt",
+        "rating": 3,
+        "subject": "Worked but it hurts",
+        "review": "It cleared up my throat4 most of the way, but it made my chest hurt, made my eyes water so much they burned and made me feel out of breath... I think I will stick to Sudafed."
+    }],
+    "description": [
+        "Thins & Loosens Mucus",
+        "Controls Cough",
+        "Relieves Chest Congestion"
+    ]
+},
+{
+    "drug_name": "SUDAFED PEÆ Pressure + Pain + Cough Liquid",
+    "images": [
+        "https://www.sudafed.com/sites/sudafed_us/files/styles/product_image/public/product-images/sudafed_pe_pressure_pain_liquid-6_1.jpg"
+    ],
+    "tags": ["cold", "cough"],
+    "rating":
+    {
+        "average": 4.78,
+        "5_star_count": 300,
+        "4_star_count": 50,
+        "3_star_count": 2,
+        "2_star_count": 6,
+        "1_star_count": 2
+    },
+    "reviews": [
+    {
+        "user_name": "Anne Wix",
+        "rating": 5,
+        "subject": "Great Product- works fast",
+        "review": "This works great! Truly a life saver. My only issue is that it only lasts 4 hours. I can definitely tell when it's wearing off."
+    },
+    {
+        "user_name": "Katie Cretu",
+        "rating": 4,
+        "subject": "Just Works",
+        "review": "I have purchased Sudafed since it came on the market and was disappointed when it was placed behind the Pharmacy counter. I thought the product had been recalled since I could not find it. However, upon learning that I would have to go to the Pharmacy counter every time, I decided to order it. Ordering it was convenient and considerably less expensive than purchasing it in the store. It came within a couple of days and was exactly what I ordered."
+    },
+    {
+        "user_name": "Brad Litt",
+        "rating": 5,
+        "subject": "Great Product",
+        "review": "I use this product pretty regularly. I had never had issues with my sinuses before but a few years ago I got a terrible sines infection and now my sinuses are always hurting. I always use Sudafed PE to help with the pain when it is particularly nasty, like today actually. This product works really well and I will continue to purchase it on a regular basis."
+    }],
+    "description": [
+        "Temporarily relieves sinus & cold symptoms including nasal & sinus congestion and sinus pressure",
+        "Helps alleviate sore throat, coughing, sinus headache, and minor aches and pains"
+    ]
+},
+{
+    "drug_name": "Vicks Nyquil Severe Cold & Flu Nighttime",
+    "images": [
+        "https://images-na.ssl-images-amazon.com/images/I/81Jn9tp1gtL._SY679_.jpg"
+    ],
+    "tags": ["cold", "cough", "fever"],
+    "rating":
+    {
+        "average": 4.80,
+        "5_star_count": 350,
+        "4_star_count": 50,
+        "3_star_count": 2,
+        "2_star_count": 6,
+        "1_star_count": 2
+    },
+    "reviews": [
+    {
+        "user_name": "Suzanne Wix",
+        "rating": 5,
+        "subject": "Magical Elixir",
+        "review": "Tastes great, Warms you up when sick and puts you to sleep. And when I say sleep, this stuff KNOCKS YOU OUT. For the duration of its effects you forget that you're even sick with flu, cold (rhino virus), or other similar yet manageable afflictions. This elixir is worth every penny, I love how it makes me feel and relieves my cold symptoms."
+    },
+    {
+        "user_name": "Fiona Cretu",
+        "rating": 5,
+        "subject": "Peaceful Sleep",
+        "review": "When you have a cold, this stuff helps you sleep. It tastes kind of bad, but you will not care."
+    },
+    {
+        "user_name": "Nina Litt",
+        "rating": 3,
+        "subject": "Not so great",
+        "review": "This Severe formula will get you to bed, but the symptoms will not reduce as much as you hope."
+    }],
+    "description": [
+        "Suppresses cough",
+        "Drowsy formula gives you a full night of sleep"
+    ]
+},
+{
+    "drug_name": "Aleve PM",
+    "images": [
+        "https://images-na.ssl-images-amazon.com/images/I/51xZ1DVMyzL.jpg"
+    ],
+    "tags": ["fever", "pain", "headache"],
+    "rating":
+    {
+        "average": 4.72,
+        "5_star_count": 350,
+        "4_star_count": 100,
+        "3_star_count": 2,
+        "2_star_count": 6,
+        "1_star_count": 2
+    },
+    "reviews": [
+    {
+        "user_name": "Rita Wix",
+        "rating": 5,
+        "subject": "Amazing for Chronic Pain",
+        "review": "I have chronic pain and have trouble sleeping. This product helps with the pain and sleep. I wake up refreshed and not drowsy."
+    },
+    {
+        "user_name": "Flora Cretu",
+        "rating": 4,
+        "subject": "A staple in my life",
+        "review": "Using this to help me sleep when an ankle problem I have flares up. It serves both purposes; swelling reduction plus help with sleeping. Good product and price."
+    },
+    {
+        "user_name": "Stanton Litt",
+        "rating": 4,
+        "subject": "Be Pain-Free and Sleep Well, Tonight!",
+        "review": "A good medicine for night-time pain relief. The sleep inducer sometimes makes me groggy - eyed for a brief time, after waking up. Overall, a superb choice for pain relief, that helps one sleep at night."
+    }],
+    "description": [
+        "For occasional sleeplessness associated with minor aches and pains",
+        "Aleve PM caplets help you fall asleep for a good nightís rest and wake up with less pain"
+    ]
 }]
