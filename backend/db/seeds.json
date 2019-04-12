@@ -2,8 +2,8 @@
 {
     "drug_name": "Advil",
     "images": [
-        "https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1531323084201.jpg",
-        "https://d2ln0cvn4pv5w2.cloudfront.net/unsafe/fit-in/512x400/filters:quality(100):max_bytes(200000):fill(white)/https://dcmzfk78s4reh.cloudfront.net/1531323083211.jpg"
+        "https://dcmzfk78s4reh.cloudfront.net/1531323084201.jpg",
+        "https://dcmzfk78s4reh.cloudfront.net/1531323083211.jpg"
     ],
     "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
     "rating":
