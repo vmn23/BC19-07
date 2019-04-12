@@ -29,7 +29,11 @@ class DrugSimple extends StatelessWidget {
             children: <Widget>[
               Image.asset('assets/PfindRX_No_Text.png'),
               Column(
-                children: <Widget>[Text(drugName), Text(rating.toString())],
+                children: <Widget>[
+                  Text(drugName), 
+                  Text(rating.toString()),
+                  Text(tags.join(", "))
+                  ],
               )
             ],
           ),

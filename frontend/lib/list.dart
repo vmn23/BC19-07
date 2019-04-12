@@ -20,7 +20,7 @@ class _ListState extends State<ListPage> {
         drugName: 'Advil',
         imageUrl: 'asdfsadf',
         rating: 4.3,
-        tags: ["bleh"]),
+        tags: ["bleh", "more bleh"]),
     DrugSimple(
         drugName: 'Advil1', imageUrl: 'asdfsadf', rating: 4.1, tags: ["hello"]),
     DrugSimple(
