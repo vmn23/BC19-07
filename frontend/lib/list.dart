@@ -15,7 +15,7 @@ class _ListState extends State<ListPage> {
   int rating = 0;
   int price = 0;
 
-  List<DrugSimple> filteredDrugs;
+  List<DrugData> filteredDrugs;
 
   @override
   void initState() {

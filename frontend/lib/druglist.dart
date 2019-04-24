@@ -4,8 +4,8 @@
 
   int selectedDrug = -1;
 
-  List<DrugSimple> allDrugs = [
-  DrugSimple(
+  List<DrugData> allDrugs = [
+  DrugData(
     index: 0,
   drugName: 'Aleve PM',
   imageUrl: 'assets/aleve.jpeg',
@@ -20,7 +20,7 @@
     "When your pain is keeping you from sleeping, Aleve PM can give you the rest and relief you need. It features an easy open cap designed to make getting the medicine you need as simple as possible. The special night time formula will cut down on your pain and help you get the sleep you need. Comes in an 80-count package."
   ]
 ),
-DrugSimple(
+DrugData(
   index: 1,
   drugName: 'Bayer Aspirin',
   imageUrl: 'assets/bayer.png',
@@ -38,7 +38,7 @@ DrugSimple(
       "Taking Genuine Bayer Aspirin for pain relief does not interfere with the benefits of taking it on a doctor-directed aspirin regimen. Each 325 mg coated aspirin tablet: provides safe, proven pain relief when taken as directed; is caffeine-free and sodium-free; is coated to make it easier to swallow."
     ]
 ),
-DrugSimple(
+DrugData(
   index: 2,
   drugName: 'Cystex Cranberry',
   imageUrl: 'assets/cystex.jpg',
@@ -53,7 +53,7 @@ DrugSimple(
     "Increasing your urinary health is important, especially if you suffer from recurring urinary tract infections. With Cystex Liquid Cranberry Complex, the vitamin C, D-Mannose and inulin it contains, helps to promote a healthy bladder. By taking just one tablespoon of Cystex daily, you will feel the many benefits as your risk of urinary tract infections decreases and the health of your bladder increases."
   ]
 ),
-DrugSimple(
+DrugData(
   index: 3,
   drugName: 'Wallgreens Aspirin 81',
   imageUrl: 'assets/Aspirin81.jpg',
@@ -71,7 +71,7 @@ DrugSimple(
     ]
 ),
 
-DrugSimple(
+DrugData(
   index: 4,
   drugName: 'Wallgreens Aspirin 325',
   imageUrl: 'assets/aspirin325.jpg',

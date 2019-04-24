@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import './druglist.dart' as globals;
+import './reviews.dart';
 
-class DrugSimple extends StatelessWidget {
+class DrugData extends StatelessWidget {
   final int index;
   final String drugName;
   final String imageUrl;
@@ -10,7 +11,7 @@ class DrugSimple extends StatelessWidget {
   final List reviews;
   final List desc;
 
-  DrugSimple(
+  DrugData(
       {this.index = -1,
       this.drugName,
       this.imageUrl,
@@ -19,8 +20,8 @@ class DrugSimple extends StatelessWidget {
       this.reviews = const [],
       this.desc = const []});
 
-  factory DrugSimple.fromJson(Map<String, dynamic> json) {
-    return DrugSimple(
+  factory DrugData.fromJson(Map<String, dynamic> json) {
+    return DrugData(
         drugName: json["drug_name"],
         imageUrl: json["images"],
         rating: double.parse(json["rating"]["average"]),
@@ -99,9 +100,15 @@ class DrugSimple extends StatelessWidget {
                   Text(tags.join(", ")),
                 ],
               ),
-              Padding(child:Text('Drug Info: ', style: tStyle),padding: EdgeInsets.all(10.0),),
+              Padding(
+                child: Text('Drug Info: ', style: tStyle),
+                padding: EdgeInsets.all(10.0),
+              ),
               Text(desc.join("\n ")),
-              Padding(child:Text('Reviews: ', style: tStyle),padding: EdgeInsets.all(10.0),),
+              Padding(
+                child: Text('Reviews: ', style: tStyle),
+                padding: EdgeInsets.all(10.0),
+              ),
               Text(reviews.join("\n ")),
             ],
           ),
