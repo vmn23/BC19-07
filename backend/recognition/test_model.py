@@ -9,7 +9,7 @@ import sys
 # creating database inputs
 orb = cv2.ORB_create() 
 
-mypath = "./images/Database"
+mypath = "./Database"
 labels = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 database = []
