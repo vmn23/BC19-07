@@ -1,14 +1,21 @@
+const { spawn } = require('child_process');
 const { getDB } = require('../db/getDB.js');
+
 
 const { DB_NAME } = process.env || 'tech_pirates';
 
 function processImage(req, res, next) {
-  res.data = {
-    status: 200,
-    message: 'image has been processed',
-    image: `image name is ${req.file.filename}`,
-  };
-  next();
+  const { file } = req;
+  const { filename } = file;
+  const recognitionModel = spawn('python', ['../recognition/test_model.py', filename]);
+  recognitionModel.stdout.on('data', (data) => {
+    const drugNames = data;
+    res.data = {
+      status: 200,
+      drugs: drugNames,
+    };
+    next();
+  });
 }
 
 function getDrugByName(req, res, next) {
