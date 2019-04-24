@@ -14,7 +14,7 @@ labels = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
 database = []
 for label in labels:
-    img = cv2.imread('./images/Database/' + label,1)
+    img = cv2.imread('./Database/' + label,1)
     img = cv2.resize(img, (300, 300))
     kp, des = orb.detectAndCompute(img,None)
     hist = cv2.calcHist([img], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
