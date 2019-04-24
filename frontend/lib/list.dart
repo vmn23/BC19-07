@@ -1,4 +1,7 @@
 import 'dart:core';
+import 'dart:convert';
+import 'dart:async' show Future;
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
 
 import './star.dart';
@@ -17,11 +20,21 @@ class _ListState extends State<ListPage> {
 
   List<DrugData> filteredDrugs;
 
+  Future<String> _loadDrugAsset() async {
+    return await rootBundle.loadString('assets/sample.json');
+  }
+
+  Future loadDrugs() async {
+    String jsonString = await _loadDrugAsset();
+    final jsonResponse = json.decode(jsonString);
+    globals.allDrugs = jsonResponse.map((i)=>DrugData.fromJson(i)).toList().cast<DrugData>();
+  }
+
   @override
   void initState() {
     super.initState();
+    loadDrugs();
     symptomFilter.addListener(updateList);
-    updateList();
   }
 
   void dispose() {
@@ -30,7 +43,7 @@ class _ListState extends State<ListPage> {
   }
 
   void updateList() {
-    filteredDrugs = globals.allDrugs.where((i) => i.rating > rating).toList();
+    filteredDrugs = globals.allDrugs.where((i) => i.rating.average > rating).toList();
     if (filteredDrugs != null) {
       if (symptomFilter.text != "") {
         filteredDrugs = filteredDrugs

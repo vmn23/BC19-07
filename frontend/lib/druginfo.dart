@@ -7,25 +7,29 @@ class DrugData extends StatelessWidget {
   final String drugName;
   final String imageUrl;
   final List<String> tags;
-  final double rating;
-  final List reviews;
-  final List desc;
+  final Rating rating;
+  final List<Review> reviews;
+  final List<String> desc;
 
   DrugData(
-      {this.index = -1,
-      this.drugName,
-      this.imageUrl,
-      this.rating,
-      this.tags,
-      this.reviews = const [],
-      this.desc = const []});
+      {this.index, this.drugName, this.imageUrl, this.rating, this.tags, this.reviews, this.desc});
 
   factory DrugData.fromJson(Map<String, dynamic> json) {
+    var parseTags = json["tags"].cast<String>();
+    var parseRating = Rating.fromJson(json["rating"]);
+    var parseReviews = new List<Review>();
+    parseReviews = json["reviews"].map((i)=>Review.fromJson(i)).toList().cast<Review>();
+    var parseDesc = json["description"].cast<String>();
+
     return DrugData(
+        index: json["index"],
         drugName: json["drug_name"],
-        imageUrl: json["images"],
-        rating: double.parse(json["rating"]["average"]),
-        tags: []);
+        imageUrl: json["image"],
+        tags: parseTags,
+        rating: parseRating,
+        reviews: parseReviews,
+        desc: parseDesc,
+        );
   }
 
   @override
@@ -51,7 +55,7 @@ class DrugData extends StatelessWidget {
                           TextStyle(fontSize: 20.0, color: Colors.blueAccent),
                     ),
                     Text(
-                      rating.toString(),
+                      rating.average.toString(),
                       style: TextStyle(fontSize: 16.0, color: Colors.blue[300]),
                     ),
                     Text(tags.join(", "))
@@ -91,7 +95,7 @@ class DrugData extends StatelessWidget {
                     'Rating: ',
                     style: tStyle,
                   ),
-                  Text(rating.toString()),
+                  Text(rating.average.toString()),
                 ],
               ),
               Row(
@@ -105,11 +109,11 @@ class DrugData extends StatelessWidget {
                 padding: EdgeInsets.all(10.0),
               ),
               Text(desc.join("\n ")),
-              Padding(
-                child: Text('Reviews: ', style: tStyle),
-                padding: EdgeInsets.all(10.0),
-              ),
-              Text(reviews.join("\n ")),
+              // Padding(
+              //   child: Text('Reviews: ', style: tStyle),
+              //   padding: EdgeInsets.all(10.0),
+              // ),
+              // Text(reviews.join("\n ")),
             ],
           ),
         ),
