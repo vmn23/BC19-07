@@ -9,19 +9,19 @@ import sys
 # creating database inputs
 orb = cv2.ORB_create() 
 
-mypath = "./Database"
-labels = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+script_path = sys.argv[1]
+dbpath = script_path + 'Database/'
+labels = [f for f in listdir(dbpath) if isfile(join(dbpath, f))]
 
 database = []
 for label in labels:
-    img = cv2.imread('./Database/' + label,1)
+    img = cv2.imread(dbpath + label, 1)
     img = cv2.resize(img, (300, 300))
     kp, des = orb.detectAndCompute(img,None)
     hist = cv2.calcHist([img], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
     database.append([hist,des,img])
 
 labels = [label[:-4] for label in labels]
-print(labels)
 
 def matching(img, database):
     img = cv2.resize(img, (300, 300))
@@ -50,12 +50,12 @@ def matching(img, database):
     return labels[score.index(max(score))]
 
 
-def OTC_rec(image_dir):
+def OTC_rec(image_path):
     # initialize the list of class labels MobileNet SSD was trained to
     # detect, then generate a set of bounding box colors for each class
-    prototxt = "MobileNetSSD_deploy.prototxt.txt"
-    model = "MobileNetSSD_deploy.caffemodel"
-    test = image_dir
+    prototxt = script_path + "MobileNetSSD_deploy.prototxt.txt"
+    model = script_path + "MobileNetSSD_deploy.caffemodel"
+    test = image_path
     threshold = 0.2
     output = []
 
@@ -101,6 +101,7 @@ def OTC_rec(image_dir):
 
 # test output
 
-image_to_test = sys.argv[1]
-print('testing', image_to_test)
-OTC_rec(image_to_test)
+image_to_test = sys.argv[2]
+# print('testing', image_to_test)
+print(OTC_rec(image_to_test))
+sys.stdout.flush()
