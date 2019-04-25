@@ -18,6 +18,39 @@
         "rating": 4,
         "subject": "My Favorite",
         "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
+      },
+      {
+        "user_name": "John Doe",
+        "rating": 4,
+        "subject": "My akfhakldh",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
+      }
+    ],
+    "description": [
+      "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
+      "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
+      "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+    ]
+  },
+  {
+    "index": 0,
+    "drug_name": "Advil2",
+    "image": "assets/aleve.jpeg",
+    "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
+    "rating": {
+      "average": 3.95,
+      "5_star_count": 100,
+      "4_star_count": 10,
+      "3_star_count": 5,
+      "2_star_count": 2,
+      "1_star_count": 1
+    },
+    "reviews": [
+      {
+        "user_name": "John Doe",
+        "rating": 4,
+        "subject": "My Favorite",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
       }
     ],
     "description": [

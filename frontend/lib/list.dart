@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 import './star.dart';
 import './druginfo.dart';
@@ -18,10 +19,14 @@ class _ListState extends State<ListPage> {
   int rating = 0;
   int price = 0;
 
-  List<DrugData> filteredDrugs;
+  List<DrugData> filteredDrugs = [];
 
   Future<String> _loadDrugAsset() async {
+    String link;
+    link = "";
     return await rootBundle.loadString('assets/sample.json');
+    // var res = await http.get(Uri.encodeFull(link), headers: {"Accept": "application/json"});
+    // return res.body;
   }
 
   Future loadDrugs() async {
@@ -35,6 +40,7 @@ class _ListState extends State<ListPage> {
     super.initState();
     loadDrugs();
     symptomFilter.addListener(updateList);
+    updateList();
   }
 
   void dispose() {

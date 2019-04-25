@@ -1,4 +1,6 @@
-class Review {
+import 'package:flutter/material.dart';
+
+class Review extends StatelessWidget {
   final String username;
   final String subject;
   final String text;
@@ -7,11 +9,31 @@ class Review {
   Review({this.username, this.subject, this.text, this.rating});
 
   factory Review.fromJson(Map<String, dynamic> json) {
-    return Review (
+    return Review(
       username: json["user_name"],
       subject: json["subject"],
       text: json["text"],
       rating: json["rating"],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: SizedBox(
+        child: Card(
+          margin: EdgeInsets.all(5),
+          child: Column(
+            children: <Widget>[
+              Text(subject),
+              Text(username),
+              Text(text),
+              // Text('Sup ben'),
+            ],
+          ),
+        ),
+        width: 400,
+      ),
     );
   }
 }
@@ -24,16 +46,22 @@ class Rating {
   final int twoStarCount;
   final int oneStarCount;
 
-  Rating({this.average, this.fiveStarCount, this.fourStarCount, this.threeStarCount, this.twoStarCount, this.oneStarCount});
+  Rating(
+      {this.average,
+      this.fiveStarCount,
+      this.fourStarCount,
+      this.threeStarCount,
+      this.twoStarCount,
+      this.oneStarCount});
 
   factory Rating.fromJson(Map<String, dynamic> json) {
-    return Rating (
-      average: json["average"], 
+    return Rating(
+      average: json["average"],
       fiveStarCount: json["5_star_count"],
       fourStarCount: json["4_star_count"],
       threeStarCount: json["3_star_count"],
       twoStarCount: json["2_star_count"],
       oneStarCount: json["1_star_count"],
-      );
+    );
   }
 }
