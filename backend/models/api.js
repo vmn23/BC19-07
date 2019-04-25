@@ -24,7 +24,8 @@ function processImage(req, res, next) {
   });
   recognitionModel.stderr.on('data', (data) => {
     console.log('have error', String(data))
-    next();
+    const err = new Error(String(data));
+    next(err);
   });
   recognitionModel.on('error', (err) => {
     console.log('Failed to start subprocess.');
