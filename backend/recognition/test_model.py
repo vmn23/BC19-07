@@ -4,25 +4,29 @@ import numpy as np
 import cv2
 from os import listdir
 from os.path import isfile, join
-import sys
 
 # creating database inputs
 orb = cv2.ORB_create() 
 
+# getting path of code
 script_path = sys.argv[1]
+
+# getting info from database
 dbpath = script_path + 'Database/'
 labels = [f for f in listdir(dbpath) if isfile(join(dbpath, f))]
 
 database = []
 for label in labels:
-    img = cv2.imread(dbpath + label, 1)
+    img = cv2.imread('.\images\Database\\' + label,1)
     img = cv2.resize(img, (300, 300))
     kp, des = orb.detectAndCompute(img,None)
     hist = cv2.calcHist([img], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
     database.append([hist,des,img])
 
-labels = [label[:-4] for label in labels]
+labels = [label[:-6] for label in labels]
 
+
+# matching function for image to database with ORB and 3D color histogram
 def matching(img, database):
     img = cv2.resize(img, (300, 300))
     kp, des = orb.detectAndCompute(img,None)
@@ -50,12 +54,13 @@ def matching(img, database):
     return labels[score.index(max(score))]
 
 
-def OTC_rec(image_path):
+# function for OTC recognition
+def OTC_rec(image_dir):
     # initialize the list of class labels MobileNet SSD was trained to
     # detect, then generate a set of bounding box colors for each class
-    prototxt = script_path + "MobileNetSSD_deploy.prototxt.txt"
-    model = script_path + "MobileNetSSD_deploy.caffemodel"
-    test = image_path
+    prototxt = "MobileNetSSD_deploy.prototxt.txt"
+    model = "MobileNetSSD_deploy.caffemodel"
+    test = image_dir
     threshold = 0.2
     output = []
 
@@ -99,9 +104,7 @@ def OTC_rec(image_path):
                 output.append(label)
     return output
 
-# test output
-
+# retrieving argument for image to test
 image_to_test = sys.argv[2]
-# print('testing', image_to_test)
 print(OTC_rec(image_to_test))
 sys.stdout.flush()
