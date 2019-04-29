@@ -49,7 +49,7 @@ class _ListState extends State<ListPage> {
   }
 
   void updateList() {
-    filteredDrugs = globals.allDrugs.where((i) => i.rating.average > rating).toList();
+    filteredDrugs = globals.allDrugs.where((i) => i.rating.average >= rating).toList();
     if (filteredDrugs != null) {
       if (symptomFilter.text != "") {
         filteredDrugs = filteredDrugs
@@ -89,7 +89,7 @@ class _ListState extends State<ListPage> {
               ),
               Row(children: <Widget>[
                 Text(
-                  'Rating ≥ ',
+                  'Rating',
                   style: new TextStyle(
                       color: Colors.black87,
                       fontFamily: "Poppins",
@@ -102,9 +102,7 @@ class _ListState extends State<ListPage> {
                         updateList();
                       }),
                 ),
-                Text('         '),
-                Text(
-                  'Price ≤ ',
+                Text('Price',
                   style: new TextStyle(
                       color: Colors.black87,
                       fontFamily: "Poppins",

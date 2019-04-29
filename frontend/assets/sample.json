@@ -1,62 +1,132 @@
 [
   {
     "index": 0,
-    "drug_name": "Advil",
-    "image": "assets/aleve.jpeg",
-    "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
+    "drug_name": "Aleve PM",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/51xZ1DVMyzL._SY355_.jpg",
+    "tags": ["aches", "arthritis", "sleep", "pain", "headache"],
     "rating": {
-      "average": 4.95,
-      "5_star_count": 100,
-      "4_star_count": 10,
-      "3_star_count": 5,
-      "2_star_count": 2,
-      "1_star_count": 1
+      "average": 5.00,
+      "5_star_count": 5,
+      "4_star_count": 0,
+      "3_star_count": 0,
+      "2_star_count": 0,
+      "1_star_count": 0
     },
     "reviews": [
       {
         "user_name": "John Doe",
-        "rating": 4,
-        "subject": "My Favorite",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
+        "rating": 5,
+        "subject": "Good night's sleep",
+        "text": "With these, I sleep like a baby. Too bad Amazon will only let me order two at a time."
       },
       {
-        "user_name": "John Doe",
-        "rating": 4,
-        "subject": "My akfhakldh",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
+        "user_name": "Violet",
+        "rating": 5,
+        "subject": "Five Stars",
+        "text": "Perfect nighttime sleep aid for people with aches and pains that would usually wake you up."
       }
     ],
     "description": [
-      "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
-      "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
-      "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+      "You don’t have to lose sleep over minor aches and pains.",
+      "Don’t let minor aches and pains keep you tossing and turning all night. Aleve PM is the first and only over-the-counter PM product with a sleep aid plus the 12-hour strength of Aleve."
     ]
   },
   {
-    "index": 0,
-    "drug_name": "Advil2",
-    "image": "assets/aleve.jpeg",
-    "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
+    "index": 1,
+    "drug_name": "Cystex",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71hCYlkvd8L._SY355_.jpg",
+    "tags": ["UTI", "Infection"],
     "rating": {
-      "average": 3.95,
-      "5_star_count": 100,
-      "4_star_count": 10,
-      "3_star_count": 5,
-      "2_star_count": 2,
-      "1_star_count": 1
+      "average": 4.64,
+      "5_star_count": 233,
+      "4_star_count": 18,
+      "3_star_count": 6,
+      "2_star_count": 3,
+      "1_star_count": 15
     },
     "reviews": [
       {
-        "user_name": "John Doe",
+        "user_name": "Wendy Wells",
+        "rating": 5,
+        "subject": "IT WORKS!",
+        "text": "About 6 years ago I began to have UTIs every 6 months or so. They are painful and uncomfortable and after a couple of years I was tired of it! I started taking a tablespoon of CYSTEX every morning and it was four years before I had another UTI. My goal is to have NONE but 1 every four years is not bad for me! I love this stuff!"
+      },
+      {
+        "user_name": "Jacob",
         "rating": 4,
-        "subject": "My Favorite",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
+        "subject": "It DOES WORK....but it takes some time. ",
+        "text": "A little background. I get semi-frequent uti's and i purchased this from my local walgreens. Not from amazon but i figured more people would see this review on amazon and not walgreens. So this is the morning after i took 2 tablespoons of cystex. What i will say is that as of now my pain and symptoms are gone, however it took several hours for it to work. The taste is horrible, but after looking for my usual d-mannose powder i usually take with no sucess, I figured i would try this bc the bottle states it has d-mannose in it. So i mean it works... but compairing it to d-mannose its less affective. When i take d-mannose i notice symptoms are gone within the first hours, with cystex it took about 10 hours, a double dose and taking their pain relief pills 3 times before i could consider sleeping through the night. SO i give it 4 stars bc of it. It DOES WORK, but i would much rather take straight d-mannose powder and get instant relief. I will continue to take the cystex for the next few days to a week to prevent it from coming back, but i will probably purchase d-mannose for the future as this was a emergency purchase anyway."
+      },
+      {
+        "user_name": "Elderberry",
+        "rating": 1,
+        "subject": "Too Sweet",
+        "text": "We've been using Cystex for the past year or so and loved it but the latest batch seems a lot sweeter than before,so much so I'm not sure I can continue to choke it down. I just discovered it's sweetened by sucralose, or Splenda, but don't know if that's new or if they switched from something else or what. Anyone else notice the stronger sweet taste?"
       }
     ],
     "description": [
-      "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
-      "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
-      "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
+      "Cystex Liquid Cranberry Complex uses the proprietary, clinically-proven Proantinox formula, which contains Natural cranberry concentrate.  ",
+      "It disables the cell structure of E. coli by inhibiting their ability to adhere to the wall of the urinary tract."
+    ]
+  },
+  {
+    "index": 2,
+    "drug_name": "Walgreens Aspirin 81",
+    "image": "https://pics.drugstore.com/prodimg/369204/900.jpg",
+    "tags": ["aches", "aspirin", "NSAID", "pain", "headache"],
+    "rating": {
+      "average": 5.00,
+      "5_star_count": 8,
+      "4_star_count": 0,
+      "3_star_count": 0,
+      "2_star_count": 0,
+      "1_star_count": 0
+    },
+    "reviews": [
+      {
+        "user_name": "Jansi",
+        "rating": 5,
+        "subject": "Excellent",
+        "text": "I use this product daily for heart care. I like that it is a bottle of 500, and because it is walgreen's brand, it is less expensive."
+      },
+      {
+        "user_name": "Luke",
+        "rating": 5,
+        "subject": "Good Product",
+        "text": "Taking this as a daily aspirin for pevention reasons. Easier to swallow because of coating and it doesn't upset my stomach."
+      }
+    ],
+    "description": [
+      "Relieves minor aches and pains.",
+      "Safety coated for aspirin regimen users.",
+      "Easy to swallow."
+    ]
+  },
+  {
+    "index": 3,
+    "drug_name": "Walgreens Aspirin 325",
+    "image": "https://pics.drugstore.com/prodimg/563806/900.jpg",
+    "tags": ["aches", "aspirin", "NSAID", "pain", "headache"],
+    "rating": {
+      "average": 4.00,
+      "5_star_count": 0,
+      "4_star_count": 1,
+      "3_star_count": 0,
+      "2_star_count": 0,
+      "1_star_count": 0
+    },
+    "reviews": [
+      {
+        "user_name": "Jane",
+        "rating": 5,
+        "subject": "Very Compatible",
+        "text": "Had been taking rx pain meds part of the time and the rest of the time tri-buffered aspirin. This seems to work as good on the pain as the other aspirin with less irritation on the stomach."
+      }
+    ],
+    "description": [
+      "Relieves minor aches and pains.",
+      "Safety coated for aspirin regimen users.",
+      "Easy to swallow."
     ]
   }
 ]

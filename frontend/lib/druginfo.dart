@@ -42,12 +42,12 @@ class DrugData extends StatelessWidget {
             Navigator.pushNamed(context, '/detail');
           },
           child: Card(
-            margin: EdgeInsets.all(10),
+            margin: EdgeInsets.all(5),
             child: Row(
               children: <Widget>[
-                Image.asset(imageUrl),
-                Text('    '),
-                Column(
+                Image.network(imageUrl),
+                Expanded(
+                  child: Column (
                   children: <Widget>[
                     Text(
                       drugName,
@@ -58,8 +58,11 @@ class DrugData extends StatelessWidget {
                       rating.average.toString(),
                       style: TextStyle(fontSize: 16.0, color: Colors.blue[300]),
                     ),
-                    Text(tags.join(", "))
+                    Expanded(
+                        child: Text(tags.join(", "))
+                    ),
                   ],
+                  ),
                 ),
               ],
             ),

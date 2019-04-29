@@ -34,10 +34,11 @@ class _TakePictureState extends State<TakePicture> {
         backgroundColor: Colors.blueGrey[900],
       ),
       body: Center(
-        child: _image == null
-            ? Text('No image taken yet.')
-            : Column(children: <Widget>[
-                Image.file(_image, height: 555),
+        child:
+//        image == null ? Text('No image taken yet.') :
+            Column(children: <Widget>[
+//                Image.file(_image, height: 555),
+                Image.asset('assets/bayer.png'),
                 RaisedButton(
                   child: Text('Analyze Image'),
                   onPressed: sendImage,
