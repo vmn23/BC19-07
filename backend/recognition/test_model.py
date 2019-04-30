@@ -59,8 +59,8 @@ def matching(img, database):
 def OTC_rec(image_dir):
     # initialize the list of class labels MobileNet SSD was trained to
     # detect, then generate a set of bounding box colors for each class
-    prototxt = "MobileNetSSD_deploy.prototxt.txt"
-    model = "MobileNetSSD_deploy.caffemodel"
+    prototxt = script_path + "MobileNetSSD_deploy.prototxt.txt"
+    model = script_path + "MobileNetSSD_deploy.caffemodel"
     test = image_dir
     threshold = 0.2
     output = []
