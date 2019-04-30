@@ -22,8 +22,8 @@ class _ListState extends State<ListPage> {
   List<DrugData> filteredDrugs = [];
 
   Future<String> _loadDrugAsset() async {
-    String link;
-    link = "";
+//    String link;
+//    link = "";
     return await rootBundle.loadString('assets/sample.json');
     // var res = await http.get(Uri.encodeFull(link), headers: {"Accept": "application/json"});
     // return res.body;
