@@ -18,7 +18,7 @@ labels = [f for f in listdir(dbpath) if isfile(join(dbpath, f))]
 
 database = []
 for label in labels:
-    img = cv2.imread('.\images\Database\\' + label,1)
+    img = cv2.imread(dbpath + label,1)
     img = cv2.resize(img, (300, 300))
     kp, des = orb.detectAndCompute(img,None)
     hist = cv2.calcHist([img], [0, 1, 2], None, [16, 16, 16], [0, 256, 0, 256, 0, 256])
