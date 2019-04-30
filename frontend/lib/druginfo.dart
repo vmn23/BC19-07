@@ -87,7 +87,7 @@ class DrugData extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: SizedBox(
-                  child: new Image.asset(imageUrl),
+                  child: new Image.network(imageUrl),
                   height: 200,
                   width: 200,
                 ),

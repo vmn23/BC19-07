@@ -53,7 +53,7 @@ class _ListState extends State<ListPage> {
     if (filteredDrugs != null) {
       if (symptomFilter.text != "") {
         filteredDrugs = filteredDrugs
-            .where((i) => i.tags.contains(symptomFilter.text))
+            .where((i) => i.tags.map((t) => t.toLowerCase()).contains(symptomFilter.text.toLowerCase()))
             .toList();
       }
     }
@@ -119,9 +119,11 @@ class _ListState extends State<ListPage> {
               ]),
               filteredDrugs.length == 0
                   ? Text('No drugs match that criteria, please try again')
-                  : SingleChildScrollView(
-                      child: Column(children: filteredDrugs),
-                    ),
+                  : Expanded(
+                      child: SingleChildScrollView(
+                        child: Column(children: filteredDrugs),
+                      ),
+              ),
             ],
           ),
         ),

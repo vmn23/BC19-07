@@ -35,16 +35,16 @@ class _TakePictureState extends State<TakePicture> {
       ),
       body: Center(
         child:
-//        image == null ? Text('No image taken yet.') :
-            Column(children: <Widget>[
-//                Image.file(_image, height: 555),
-                Image.asset('assets/bayer.png'),
+        _image == null ? Text('No image taken yet.') :
+          Column(children: <Widget>[
+            Expanded(
+              child: Image.file(_image)),
                 RaisedButton(
                   child: Text('Analyze Image'),
                   onPressed: sendImage,
                 )
               ]),
-      ),
+            ),
       floatingActionButton: FloatingActionButton(
         onPressed: getImage,
         tooltip: 'Pick Image',
