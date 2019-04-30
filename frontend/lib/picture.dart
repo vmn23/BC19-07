@@ -38,7 +38,9 @@ class _TakePictureState extends State<TakePicture> {
     request.files.add(multipartFile);
     var response = await request.send();
     response.stream.transform(utf8.decoder).listen((value) {
-      print(json.decode(value.trim())['drugs']);
+      print(value);
+      var data = json.decode(value.trim());
+      print(data);
     });
     // Navigate to the second screen using a named route
 //    Navigator.pushNamed(context, '/list');

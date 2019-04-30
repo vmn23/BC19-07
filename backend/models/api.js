@@ -8,6 +8,8 @@ const { DB_NAME } = process.env || 'tech_pirates';
 const scriptPath = path.join(__dirname, '../recognition/test_model.py');
 const recognitionPath = path.join(__dirname, '../recognition/');
 
+const seeds = require('../db/seeds.json');
+
 function processImage(req, res, next) {
   const { file } = req;
   const { filename } = file;
@@ -18,7 +20,8 @@ function processImage(req, res, next) {
     const drugNames = String(data);
     res.data = {
       status: 200,
-      drugs: drugNames,
+      drugs: seeds,
+      drug_names: drugNames,
     };
     next();
   });
