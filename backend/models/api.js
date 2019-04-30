@@ -14,6 +14,7 @@ function processImage(req, res, next) {
   const { file } = req;
   const { filename } = file;
   const image = path.join(__dirname, '../uploads/', filename);
+  console.log(scriptPath, recognitionPath, image)
   const recognitionModel = spawn('python', [scriptPath, recognitionPath, image]);
   recognitionModel.stdout.on('data', (data) => {
     console.log('have data', String(data))
