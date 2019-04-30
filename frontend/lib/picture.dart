@@ -39,7 +39,7 @@ class _TakePictureState extends State<TakePicture> {
     var response = await request.send();
     response.stream.transform(utf8.decoder).listen((value) {
       print(value);
-      var data = json.decode(value.trim());
+      var data = json.decode(value);
       print(data);
     });
     // Navigate to the second screen using a named route
