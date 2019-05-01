@@ -51,7 +51,7 @@ def matching(img, database):
         score2.append(cv2.compareHist(hist, hist_base, cv2.HISTCMP_INTERSECT))
     
     score2 = (np.array(score2)-np.mean(score2))/np.std(score2)    
-    score = list(np.array(score1) + score2)
+    score = list(np.array(score1) + 0.1*score2)
     return labels[score.index(max(score))]
 
 
