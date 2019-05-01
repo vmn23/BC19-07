@@ -48,8 +48,9 @@ def matching(img, database):
         score1.append(len(similar_regions) / len(matches))
         
         # Comparing Color Histogram
-        score2.append(cv2.compareHist(hist, hist_base, cv2.HISTCMP_CORREL))
-        
+        score2.append(cv2.compareHist(hist, hist_base, cv2.HISTCMP_INTERSECT))
+    
+    score2 = (np.array(score2)-np.mean(score2))/np.std(score2)    
     score = list(np.array(score1) + score2)
     return labels[score.index(max(score))]
 
