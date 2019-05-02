@@ -33,7 +33,6 @@ class _TakePictureState extends State<TakePicture> {
     var request = new http.MultipartRequest("POST", uri);
     var multipartFile = new http.MultipartFile('raw-image', stream, length,
         filename: basename(_image.path));
-    //contentType: new MediaType('image', 'png'));
 
     request.files.add(multipartFile);
     var response = await request.send();
@@ -42,8 +41,6 @@ class _TakePictureState extends State<TakePicture> {
       var data = json.decode(value);
       print(data['drug_names']);
     });
-    // Navigate to the second screen using a named route
-//    Navigator.pushNamed(context, '/list');
   }
 
   @override
@@ -62,7 +59,11 @@ class _TakePictureState extends State<TakePicture> {
               child: Image.file(_image)),
                 RaisedButton(
                   child: Text('Analyze Image'),
-                  onPressed: sendImage,
+                  onPressed: () {
+                    sendImage();
+                    sleep(const Duration(seconds: 5));
+                    Navigator.pushNamed(context, '/list');
+                  },
                 )
               ]),
             ),
