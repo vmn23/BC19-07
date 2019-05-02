@@ -14,11 +14,11 @@ function processImage(req, res, next) {
   const { file } = req;
   const { filename } = file;
   const image = path.join(__dirname, '../uploads/', filename);
-  console.log(scriptPath, recognitionPath, image)
+  // console.log(scriptPath, recognitionPath, image)
   const recognitionModel = spawn('python', [scriptPath, recognitionPath, image]);
   recognitionModel.stdout.on('data', (data) => {
-    console.log('have data', String(data))
-    const drugNames = String(data);
+    console.log('have data', String(data).replace(/'/g, '\"'))
+    const drugNames = JSON.parse(String(data).replace(/'/g, '\"'));
     res.data = {
       status: 200,
       drugs: seeds,
@@ -27,7 +27,7 @@ function processImage(req, res, next) {
     next();
   });
   recognitionModel.stderr.on('data', (data) => {
-    console.log('have error', String(data))
+    console.log('have error', String(data));
     const err = new Error(String(data));
     next(err);
   });
@@ -66,41 +66,30 @@ function getDrugByName(req, res, next) {
     .catch(dbErr => next(dbErr));
 }
 
-function getSampleJSON(req, res, next) {
-  res.data = [
-    {
-      "index": 0,
-      "drug_name": "Advil",
-      "image": "assets/aleve.jpeg",
-      "tags": ["fever", "pain", "headache", "stress", "cold", "cough"],
-      "rating": {
-        "average": 4.95,
-        "5_star_count": 100,
-        "4_star_count": 10,
-        "3_star_count": 5,
-        "2_star_count": 2,
-        "1_star_count": 1
-      },
-      "reviews": [
-        {
-          "user_name": "John Doe",
-          "rating": 4,
-          "subject": "My Favorite",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga ab expedita, consequatur assumenda voluptate culpa commodi nobis maiores aliquam, explicabo earum at magnam ipsam non, sit excepturi. Maxime, soluta."
-        }
-      ],
-      "description": [
-        "This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1. This is paragraph 1.",
-        "This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2. This is paragraph 2.",
-        "This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3. This is paragraph 3."
-      ]
+function getDrugs(req, res, next) {
+  const { data } = res || {};
+  const { drug_names: names, status } = data || {};
+  const uniques = [...new Set(names)];
+  const retDrugs = [];
+  for (let i = 0; i < seeds.length; i++) {
+    const seed = seeds[i];
+    if (names.includes(seed.drug_name)) {
+      retDrugs.push(seed);
     }
-  ]
+  }
+  for (let i = 0; i < retDrugs.length; i++) {
+    retDrugs[i].index = i;
+  }
+  res.data = {
+    status,
+    drugs: retDrugs,
+    drug_names: uniques,
+  };
   next();
 }
 
 module.exports = {
   processImage,
   getDrugByName,
-  getSampleJSON,
+  getDrugs,
 };

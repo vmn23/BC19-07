@@ -27,7 +27,7 @@ function appHealth(req, res, next) {
 }
 
 router.route('/identify')
-  .post(upload.single('raw-image'), model.processImage, sendAsJSON);
+  .post(upload.single('raw-image'), model.processImage, model.getDrugs, sendAsJSON);
 
 router.route('/health')
   .get(appHealth, sendAsJSON);
