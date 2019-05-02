@@ -3,7 +3,13 @@
     "index": 0,
     "drug_name": "Aleve PM",
     "image": "https://images-na.ssl-images-amazon.com/images/I/51xZ1DVMyzL._SY355_.jpg",
-    "tags": ["aches", "arthritis", "sleep", "pain", "headache"],
+    "tags": [
+      "aches",
+      "arthritis",
+      "sleep",
+      "pain",
+      "headache"
+    ],
     "rating": {
       "average": 5.00,
       "5_star_count": 5,
@@ -35,7 +41,10 @@
     "index": 1,
     "drug_name": "Cystex",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71hCYlkvd8L._SY355_.jpg",
-    "tags": ["UTI", "Infection"],
+    "tags": [
+      "UTI",
+      "Infection"
+    ],
     "rating": {
       "average": 4.64,
       "5_star_count": 233,
@@ -69,11 +78,17 @@
       "It disables the cell structure of E. coli by inhibiting their ability to adhere to the wall of the urinary tract."
     ]
   },
-    {
+  {
     "index": 2,
     "drug_name": "Walgreens Aspirin 81",
     "image": "https://pics.drugstore.com/prodimg/369204/900.jpg",
-    "tags": ["aches", "aspirin", "NSAID", "pain", "headache"],
+    "tags": [
+      "aches",
+      "aspirin",
+      "NSAID",
+      "pain",
+      "headache"
+    ],
     "rating": {
       "average": 5.00,
       "5_star_count": 8,
@@ -102,11 +117,17 @@
       "Easy to swallow."
     ]
   },
-    {
+  {
     "index": 3,
     "drug_name": "Walgreens Aspirin 325",
     "image": "https://pics.drugstore.com/prodimg/563806/900.jpg",
-    "tags": ["aches", "aspirin", "NSAID", "pain", "headache"],
+    "tags": [
+      "aches",
+      "aspirin",
+      "NSAID",
+      "pain",
+      "headache"
+    ],
     "rating": {
       "average": 4.00,
       "5_star_count": 0,
