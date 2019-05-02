@@ -40,7 +40,7 @@ class _TakePictureState extends State<TakePicture> {
     response.stream.transform(utf8.decoder).listen((value) {
       print(value);
       var data = json.decode(value);
-      print(data);
+      print(data['drug_names']);
     });
     // Navigate to the second screen using a named route
 //    Navigator.pushNamed(context, '/list');

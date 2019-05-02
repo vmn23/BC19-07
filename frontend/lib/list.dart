@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'dart:async' show Future;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 import './star.dart';
 import './druginfo.dart';
