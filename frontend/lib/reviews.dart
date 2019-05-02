@@ -25,8 +25,8 @@ class Review extends StatelessWidget {
           margin: EdgeInsets.all(5),
           child: Column(
             children: <Widget>[
-              Text(subject),
-              Text(username),
+              Text(subject, style: new TextStyle(fontWeight: FontWeight.bold),),
+              Text(username, style: new TextStyle(fontStyle: FontStyle.italic),),
               Text(text),
               // Text('Sup ben'),
             ],
