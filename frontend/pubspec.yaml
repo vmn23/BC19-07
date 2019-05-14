@@ -28,9 +28,10 @@ dev_dependencies:
   flutter_launcher_icons: "^0.7.0"
 
 flutter_icons:
-  image_path: "assets/icon/icon.png"
-  image_path_android: "assets/icon/icon.png"
-  image_path_ios: "assets/icon/icon.png"
+
+  image_path: "assets/PfindRX_No_Text_White.png"
+  image_path_android: "assets/PfindRX_No_Text_White.png"
+  image_path_ios: "assets/PfindRX_No_Text_White.png"
   android: true # can specify file name here e.g. "ic_launcher"
   ios: true # can specify file name here e.g. "My-Launcher-Icon"
 
